@@ -1,0 +1,26 @@
+exclude:
+    - "README.md"
+    - "changelog.md"
+
+kramdown:
+    input: GFM
+
+sass:
+    sass_dir: assets/scss
+    style: compressed
+
+author:
+    name: "Spencer Julian"
+    job: "HPC Systems Administrator"
+    bio: "I build things. Small, embedded things. Big, computational things. I build things."
+    email: "sj@spencerjulian.com"
+    url: "https://spencerjulian.com"
+    github: "https://github.com/kuruoujou"
+    twitter: "http://twitter.com/kuroshi"
+    linkedin: "https://linkedin.com/in/spencerjulian"
+
+navbar:
+    - slug: about
+      title: About
+    - slug: resume
+      title: Résumé
