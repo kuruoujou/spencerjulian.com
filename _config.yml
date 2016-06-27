@@ -23,6 +23,7 @@ author:
 title: Spencer Julian
 tagline: Hello There!
 description: DevOps, Embedded Systems, HPC
+baseurl: https://spencerjulian.com
 
 navbar:
     - slug: resume

@@ -102,6 +102,17 @@ h1{
     a {
         @extend .link;
     }
+    a.no-plugin {
+        @extend .link;
+        display: inline-block;
+        background-color: inherit;
+        color: $light-font-color;
+        border: 1px dashed $accent-color;
+        padding: 5px;
+        span {
+            background-color: $sub-background-color;
+        }
+    }
 }
 
 .site-footer {

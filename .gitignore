@@ -2,6 +2,7 @@ _site/
 .sass-cache/
 .bundle/
 .jekyll-metadata
+resume.pdf
 
 # Windows image file caches
 Thumbs.db
