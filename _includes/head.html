@@ -1,0 +1,28 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1">
+
+   {% assign page_title = '' %}
+   {% if page.title == "Home" %}
+      {% capture page_title %}
+        {{ site.title }} | {{ site.description }}
+      {% endcapture %}
+   {% else %}
+      {% capture page_title %}
+        {%if page.slug == 'category' %}Category: {% endif %}
+        {%if page.slug == 'tag' %}Tag: {% endif %} {{ page.title }} | {{ site.title }}
+      {% endcapture %}
+  {% endif %}
+  {% capture page_title %}
+      {{ page_title | strip | rstrip | lstrip | escape | strip_newlines }}
+  {% endcapture %}
+
+    <title>{{ page_title }}</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+</head>

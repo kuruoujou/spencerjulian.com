@@ -1,0 +1,23 @@
+<header class="site-header">
+    <nav class="nav">
+        <div class="container">
+            <h1 class="logo"><a href="{{ '/' | prepend: site.baseurl }}">
+                    {% if page.title == "Home" %}
+                    <span class="red">Hello There.</span>
+                    {% else %}
+                    <span class="black">Spencer Julian.</span>
+                    {% endif %}
+            </a></h1>
+            <ul class="navbar">
+                {% for link in site.navbar %}
+                {% assign current = nil %}
+                {% if page.url == link.url %}
+                    {% assign current = 'current' %}
+                {% endif %}
+                <li class="nav-item {% if forloop.first %}nav-first{% endif %} {{ current }} {% if forloop.last %}nav-last{% endif %}">
+                    <a class="{{ current }}" href="{{ '/' | prepend: site.baseurl | append: link.slug }}">{{ link.title }}</a>
+                </li>
+                {% endfor %}
+        </div>
+    </nav>
+</header>

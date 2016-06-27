@@ -1,0 +1,36 @@
+// My colors are Red and Light Grey.
+// I don't know why, I'm not a fan of either of them :P
+// I prefer green.
+$accent-color: #a50000;
+$background-color: #fff;
+$sub-background-color: #f7f7f7;
+$highlight-color: #e6e6e6;
+$border-color: #e6e6e6;
+
+$accent-font-color: $accent-color;
+$link-color: $accent-font-color;
+$active-link-color: $sub-background-color;
+$main-font-color: #555;
+$bold-font-color: #000;
+$light-font-color: #666;
+
+$base-font-family: 'Raleway Medium', sans-serif;
+$accent-font-family: 'Bebas', 'Trebuchet MS', sans-serif;
+
+$base-font-size: 1em;
+$intro-font-size: $base-font-size * 1.2;
+$navbar-font-size: $base-font-size * 1.5;
+$header-font-size: 2em;
+$footer-small-size: .75em;
+
+$navbar-min-size: 80px; 
+
+$base-line-height: 1.5;
+$header-line-height: $navbar-min-size;
+$navbar-line-height: $header-line-height;
+
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+
+
+$max-page-width: 800px;
