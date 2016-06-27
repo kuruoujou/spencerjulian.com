@@ -106,9 +106,15 @@ h1{
 
 .site-footer {
     @extend .clearfix;
-    padding: $small-spacing 0;
+    padding: 0;
     border-top: 1px solid $border-color;
-    margin: $base-spacing;
+    margin: 0;
+    .container {
+        padding-left: $base-spacing;
+    }
+    small {
+        line-height: $footer-line-height;
+    }
     .media-links {
         float: right;
         margin: 0 $small-spacing 0 0;
@@ -118,11 +124,15 @@ h1{
         
         li {
             display: inline-block;
-            padding: 0 .6em;
+            padding: 0 .4em;
             &:hover, &:focus, &:active {
                 background-color: $highlight-color;
                 border-bottom: none;
             }
+        }
+
+        li:last-child{
+            padding-right: 0;
         }
 
         a {
