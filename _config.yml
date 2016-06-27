@@ -13,6 +13,7 @@ author:
     name: "Spencer Julian"
     job: "HPC Systems Administrator"
     bio: "I build things. Small, embedded things. Big, computational things. I build things."
+    employer: "Purdue University"
     email: "sj@spencerjulian.com"
     url: "https://spencerjulian.com"
     github: "https://github.com/kuruoujou"
@@ -20,7 +21,5 @@ author:
     linkedin: "https://linkedin.com/in/spencerjulian"
 
 navbar:
-    - slug: about
-      title: About
     - slug: resume
       title: Résumé
