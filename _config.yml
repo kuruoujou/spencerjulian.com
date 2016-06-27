@@ -12,13 +12,17 @@ sass:
 author:
     name: "Spencer Julian"
     job: "HPC Systems Administrator"
-    bio: "I build things. Small, embedded things. Big, computational things. I build things."
+    bio: "I design, develop, build, and hack small things that operate on a grand scale."
     employer: "Purdue University"
     email: "sj@spencerjulian.com"
     url: "https://spencerjulian.com"
     github: "https://github.com/kuruoujou"
     twitter: "http://twitter.com/kuroshi"
     linkedin: "https://linkedin.com/in/spencerjulian"
+
+title: Spencer Julian
+tagline: Hello There!
+description: DevOps, Embedded Systems, HPC
 
 navbar:
     - slug: resume

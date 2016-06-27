@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Resume
+title: Résumé
 permalink: /resume/
 ---
 ## THIS IS MY RESUME HI!
