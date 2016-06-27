@@ -108,6 +108,7 @@ h1{
     @extend .clearfix;
     padding: $small-spacing 0;
     border-top: 1px solid $border-color;
+    margin: $base-spacing;
     .media-links {
         float: right;
         margin: 0 $small-spacing 0 0;
