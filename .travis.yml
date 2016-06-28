@@ -2,10 +2,6 @@ language: ruby
 rvm:
     - 2.1
 
-env:
-    # The github deployment key
-    - secure: "Wnu2pErmxm0NtSryXCVqQyvL7kDWVFO0sGrgEvioDT7HDk5v/eKMV6BuD2usGgrnwi0XfzUUAL5YC3Lqp5l87IwgQX+KfLSvBpXXpQuYPASU/sY6Umr8S27RKqCwid9v8dvFvVeagy1eIjBL30mPu98c7zw0ruordRPYtmddpeYHqtl3YrpGEFmCmcp2xQl8W0AT93lXyBBF3xu7wIR05fpizegXbYoLV2VoAMd35vKUN9AU5boHWicc6CwwurjoUoGMBFfzZ6BFNq0KltIcraJF9CGPLrHDaCXo+/rC/1Mh5VU0Hs8oHIfBCeU547pYGXPboqkrLQu8zdjhFGoHCf+Yv8NSMOJqIE68k1cghjp7RnEG6YnaVRzVs0uuScwmNq64DY561ZIcWzkbVlewl6Ps2tGJpgmvXtRdcZbS8kd4J8LDyDGPEI/xijaK5od2/Espq/hTDsdXU632dYTtIOUJ86qsI6UioKZ2ka+uSyiyBwp7+J5Bmj5an+5ym5aDx9hjsLMRRHCXIoxhAwqP6nsaxoWEbqeyIfnrAEHRxkbHN7aJjDA60nvhrRfWzVpnvqUbUWoBlptCcLELrnGNcYHW+llDof/niDITMAvHus5OtQXB7kixq2wNN4JqbMl2T8CqsQwOg01tDuSo+Y75XkaVTf3PHI5Qd/VFFPXbZ2w="
-
 before_script:
     - chmod +x ./tests/cibuild.sh
     - "echo ${TRAVIS_SECURE_ENV_VARS}"
@@ -22,5 +18,8 @@ after_script:
 env:
     global:
         - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up html-proofer install
+        # The github deployment key
+        - secure: "Wnu2pErmxm0NtSryXCVqQyvL7kDWVFO0sGrgEvioDT7HDk5v/eKMV6BuD2usGgrnwi0XfzUUAL5YC3Lqp5l87IwgQX+KfLSvBpXXpQuYPASU/sY6Umr8S27RKqCwid9v8dvFvVeagy1eIjBL30mPu98c7zw0ruordRPYtmddpeYHqtl3YrpGEFmCmcp2xQl8W0AT93lXyBBF3xu7wIR05fpizegXbYoLV2VoAMd35vKUN9AU5boHWicc6CwwurjoUoGMBFfzZ6BFNq0KltIcraJF9CGPLrHDaCXo+/rC/1Mh5VU0Hs8oHIfBCeU547pYGXPboqkrLQu8zdjhFGoHCf+Yv8NSMOJqIE68k1cghjp7RnEG6YnaVRzVs0uuScwmNq64DY561ZIcWzkbVlewl6Ps2tGJpgmvXtRdcZbS8kd4J8LDyDGPEI/xijaK5od2/Espq/hTDsdXU632dYTtIOUJ86qsI6UioKZ2ka+uSyiyBwp7+J5Bmj5an+5ym5aDx9hjsLMRRHCXIoxhAwqP6nsaxoWEbqeyIfnrAEHRxkbHN7aJjDA60nvhrRfWzVpnvqUbUWoBlptCcLELrnGNcYHW+llDof/niDITMAvHus5OtQXB7kixq2wNN4JqbMl2T8CqsQwOg01tDuSo+Y75XkaVTf3PHI5Qd/VFFPXbZ2w="
+
 
 sudo: false # don't need sudo, let travis use containers
