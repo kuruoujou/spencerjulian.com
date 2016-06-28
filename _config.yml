@@ -4,6 +4,7 @@ exclude:
     - "tests"
     - ".travis.yml"
     - "Gemfile"
+    - "vendor"
 
 kramdown:
     input: GFM
