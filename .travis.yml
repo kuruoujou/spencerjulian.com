@@ -12,7 +12,7 @@ script: ./tests/cibuild.sh
 # manually closed.
 after_script:
     - "chmod +x ./tests/travis-automerge.sh"
-    - "BRANCHES_TO_MERGE_REGEX='^(?\!test).*' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=kuruoujou/spencerjulian.com ./tests/travis-automerge.sh"
+    - "BRANCHES_TO_MERGE_REGEX='^(?!test).*' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=kuruoujou/spencerjulian.com ./tests/travis-automerge.sh"
 
 env:
     global:
