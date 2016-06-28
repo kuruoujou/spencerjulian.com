@@ -1,6 +1,8 @@
 exclude:
     - "README.md"
     - "changelog.md"
+    - "tests"
+    - ".travis.yml"
 
 kramdown:
     input: GFM
