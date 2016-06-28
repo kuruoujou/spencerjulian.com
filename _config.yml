@@ -3,6 +3,7 @@ exclude:
     - "changelog.md"
     - "tests"
     - ".travis.yml"
+    - "Gemfile"
 
 kramdown:
     input: GFM
