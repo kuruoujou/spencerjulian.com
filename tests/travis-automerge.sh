@@ -30,5 +30,11 @@ printf 'Pushing to %s\n' "$GITHUB_REPO" >&2
 push_uri="https://$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 
 # Redirect to /dev/null to avoid secret leakage
+printf 'Attempting to push into %s\n' "$BRANCH_TO_MERGE_INTO" >&2
 git push "$push_uri" "$BRANCH_TO_MERGE_INTO" >/dev/null 2>&1
+printf 'Complete, returned exit code %d\n' "$?" >&2
+printf 'Attempting to push into %s\n' "$TRAVIS_BRANCH" >&2
 git push "$push_uri" :"$TRAVIS_BRANCH" >/dev/null 2>&1
+printf 'Complete, returned exit code %d\n' "$?" >&2
+
+printf 'Automerge is complete.' >&2
