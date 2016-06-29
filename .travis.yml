@@ -11,4 +11,12 @@ env:
     global:
         - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up html-proofer install
 
+branches:
+    only:
+        - master
+
+after_success:
+    - chmod +x ./tests/deploy.sh
+    - ./tests/deploy.sh
+
 sudo: false # don't need sudo, let travis use containers
