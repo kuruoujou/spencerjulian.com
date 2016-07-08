@@ -11,7 +11,6 @@ env:
     global:
         - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up html-proofer install
         - AWS_S3_BUCKET=spencerjuilan.com
-        - AWS_REGION=us-east-1
         - AWS_CLOUDFRONT_ID=E1OVI5Y7GR6SFH
         - secure: "KdI658K3QewZsKs3baWS4iYX5c81E3SQ+AZy+3yP1xssF30wlQhmTBI+Puc4xAx4dqRYT1OyBPhGsuVBoR3yo7fMZscxpv/dGzkW9kLK5+7F93sBFexWAKsCDTCFSMxsyqmz6V/T81u+XBNDoQktFKQU6nwqvIkJbz5yOqkbVGXVa0PxO3DkW/JQBvN/OX3Ui41djsrqclyinrrV2RK3LVmQx8WWHSHuJOwbzSiyjJrjsjHO34p7EmH49uZcq5tb2Qh1hWMSAyCmIkW9W0kumruG83NEn7Cx0hVoq+48zqjXH1TTfcsx0wb3G83A0KcdP93m/cv3Fh0LXVINoioINO+NXUvHFJnTwpSTv8D8vqFKwOtTif0j95mQUkMl4W/kEDRDGyYc0ylxnXa8AEhx42wI26MGIaL63S7cEOtSuexSv8XmmmggBZEmk1kl8gTgKgoA7OX82tWvuLq7iBBiaxPYWqvFV0Z3rXRXCTGL8g0f48e7lDY56N6Af39Hv1vbvzY9L4XZu1/HbjnFZqxWjQJSkz8e8VZquCFZ32YL2hjUNnx2+dUlO+pwp3enKOPWBjdzX3MfF81ODgUM/yA/3Vo5R9SdEDi0MxT8wqhzUW9T4pn1VTCRxtNxO5dNCh7KlBKT6XEA7OJo+kbHIOUEq0PgDnuKTOmp+dR3QiinL0M="
         - secure: "cYOVQ+06i+PbE/fotrLI2yXzBZp2wARSjFt0LA2hkPxkGZpijxKARHuTBj9LstLCc5OxzfR2Dknhmi19AR0Qiq5NOJr99TgomlNZ/ws7YNl+07ASGG3jInRJ5dulTuJCEeznVAhOhOv7+4/yuWzvonKE62VjXDbq5m0Acv2+/szcgVZAU4PSuLnlbYamtDjQxDKfYBXjM3a+o/Q9rJZrY5T0qbex+cPiwuGgVcGQQWez3r0hYiycS/K26j3BfNw4g+z77Ahjq8YTQnb+U69Kk7sJU8GHp2OO4vtrjtgujSBaK3REUJQMqcDemgINDJidGT265q97IpLBZQV0j1d1IAvvTcVoh3/PYX5mmBbe89pQseJn4FpcbiGNoWsONoVcmICLrZumEqaWkZuCG7PtFR15fMRQPmWs1KIM8VSDu6nB4rObMKc/SQsnUpoJqzW2JS+DdaTdEFZJuN5htDZlBWSd1oiZgGIE1buXlokAOckl+xH8NfDxG7YNyxHZhHrq5YLkUSXRRbD6dBAuX5fvwjgF70qCazE5TeC7a47PfgX0CN/kuf6C543SmR3FqSDrDnlqTra19MvxbCi4wLqUIbNLrxJnK3B6U382rCRAkCJWug550KNBEsNjvzogisBAft/EQQfHKRToLg3UkNF6gJeSO6Btw5bCTkFkl9VQiho="
@@ -29,9 +28,9 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     bucket: $AWS_S3_BUCKET
-    region: $AWS_REGION
     skip_cleanup: true
     acl: public_read
+    local_dir: _site
     on:
         branch: master
         condition: $TRAVIS_PULL_REQUEST = "false" 
