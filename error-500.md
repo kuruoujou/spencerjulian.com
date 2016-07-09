@@ -5,7 +5,7 @@ title: Server error.
 
 ## Something terrible has happened.
 
-The server has returned an error. Head back to [the main page](https://spencerjulian.com)
+The server has returned an error. Head back to [the main page](/)
 and trying what you wanted to do again, or if you were just trying to view the main
 page, maybe [send me an email](mailto:sj@spencerjulian.com)?
 
