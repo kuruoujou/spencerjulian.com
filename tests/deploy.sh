@@ -5,8 +5,9 @@
 if ([ $TRAVIS_BRANCH == "master" ] && [ $TRAVIS_PULL_REQUEST == "false" ]); then
     echo "Build successful. Pushing to AWS..."
     aws --version
+    echo "Make sure credentials are valid."
+    aws iam get-user
     echo "Attempting to push _site to S3 bucket ${AWS_S3_BUCKET} in region ${AWS_REGION}"
-    echo "aws s3 sync --region $AWS_REGION --acl public-read --delete _site/ s3://$AWS_S3_BUCKET"
     aws s3 sync --region $AWS_REGION --acl public-read --delete _site/ s3://$AWS_S3_BUCKET
     echo "Setting AWS cloudfront preview"
     aws configure set preview.cloudfront true
