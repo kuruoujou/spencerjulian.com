@@ -19,11 +19,6 @@ env:
 branches:
     only:
         - master
-
-before_deploy:
-    - pip install --user awscli
-    - export PATH=$PATH:$HOME/.local/bin
-
 deploy:
     provider: s3
     access_key_id: $AWS_ACCESS_KEY_ID
@@ -35,9 +30,5 @@ deploy:
     on:
         branch: master
         condition: $TRAVIS_PULL_REQUEST = "false" 
-
-after_deploy:
-    - chmod +x ./tests/deploy.sh
-    - ./tests/deploy.sh
 
 sudo: false # don't need sudo, let travis use containers
